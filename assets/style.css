@@ -3,71 +3,131 @@
  }
  
  body {
-   font-family: Arial;
+   font-family: 'Menlo', 'Lucida Console', monospace;
    margin: 0;
    display: flex;
    flex-direction: column;
+   text-align: center;
+   color: rgb(14, 50, 121);
    min-height: 100vh;
    justify-content: flex-start;
  }
  
  header {
-   padding: 40px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: 2%;
+   padding: 10px;
    text-align: center;
-   background: darkslategrey;
-   color: #fff;
+   border: 5px solid rgb(14, 50, 121);
+   background: rgb(140, 210, 245);
+   color: #303dd0;
+ }
+
+ .textBox {
+   border: 2px solid rgb(14, 50, 121);
+   padding: 15px;
+   background-color: white;
+   color: rgb(14, 50, 121);
+ }
+
+ h1 {
+   font-size: 300%
+ }
+
+ nav li::after
+ {
+   color: #ffffff;
+   padding: 20%;
+   position: relative;
  }
  
+ nav ul {
+   display: flex;
+
+ }
+ 
+ nav a {
+   margin-left: 180px;
+   color: #ffffff;
+   font-size: 150%;
+   font-weight: bold;
+   text-decoration: none;
+   position: relative;
+ }
+ 
+ nav a:hover {
+   color: rgb(140, 210, 245);
+ }
+ 
+
  nav {
    display: flex;
-   background-color: darkolivegreen;
+   margin: 20px;
+   padding: 25px;
+   border: 2px solid rgb(14, 50, 121);
+   background-color: rgb(14, 50, 121);
  }
  
  main {
-   display: flex;
+   display: inline;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 20px;
    flex-wrap: wrap;
+   background-color: rgb(190, 230, 250);
+   border: 5px solid rgb(14, 50, 121);
    justify-content: space-around;
  }
  
  section {
    flex: 0 0 400px;
    background-color: #fff;
-   padding: 20px;
+   margin: 125px;
+   padding: 15px;
+   border: 8px solid rgb(14, 50, 121);
+   
+
  }
  
  img {
-   width: 100%;
+   margin: 30px;
+   width: 375px;
  }
  
  footer {
    flex-shrink: 0;
-   padding: 20px;
+   padding: 15px;
    text-align: center;
-   background: #13293d;
-   color: #fff;
+   border: 5px solid rgb(14, 50, 121);
+   background: rgb(105, 148, 233);
+   color: rgb(14, 50, 121);
    margin-top: auto;
  }
  
  /* Added some padding and styling for the photos */
  .photo {
+   margin: 50px;
    padding: 20px 10px;
    border: 2px solid darkviolet;
-   background-color: lavenderblush;
+   background-color: rgb(140, 210, 245);
  }
  
 
- 
  @media screen and (max-width: 768px) {
-   main,
-   nav {
+   header,
+   main {
      flex-direction: column;
    }
-   header {
-     background: blueviolet;
+ 
+   section {
+     padding-right: 0;
    }
-   nav,
-   footer {
-     background-color: darkolivegreen;
+ 
+   aside {
+     width: 100%;
+     text-align: center;
    }
  }
  
